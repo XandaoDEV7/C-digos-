@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevHub - Meus Projetos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section id="login" class="tela">
+        <div class="box">
+            <h1>Fala, dev! Qual teu nome?</h1>
+            <input type="text" id="inputNome" placeholder="Ex: Alexandre...">
+            <button onclick="logar()">Acessar Painel</button>
+        </div>
+    </section>
+
+    <section id="painel" class="tela escondido">
+        <div class="box">
+            <h2 id="boasVindas"></h2>
+            <div class="grid-projetos">
+                <button onclick="abrirEditor('html')">HTML</button>
+                <button onclick="abrirEditor('python')">Python</button>
+                <button onclick="abrirEditor('css')">CSS</button>
+                <button onclick="abrirEditor('lua')">Lua</button>
+            </div>
+            <button class="btn-reset" onclick="resetar()">Limpar Tudo</button>
+        </div>
+    </section>
+
+    <section id="editor" class="tela escondido">
+        <div class="editor-box">
+            <header>
+                <h3 id="tituloEditor"></h3>
+                <div class="btns">
+                    <button class="save" onclick="salvar()">Salvar</button>
+                    <button onclick="irParaPainel()">Voltar</button>
+                </div>
+            </header>
+            <textarea id="campoTexto" placeholder="Escreve o código aqui..."></textarea>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

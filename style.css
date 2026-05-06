@@ -1,0 +1,38 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; }
+
+body { background: #0b0b0b; color: #fff; overflow: hidden; }
+
+.tela {
+    width: 100vw; height: 100vh;
+    display: flex; justify-content: center; align-items: center;
+    position: absolute; transition: 0.4s;
+}
+
+.escondido { opacity: 0; pointer-events: none; transform: scale(0.9); }
+
+.box { background: #161616; padding: 30px; border-radius: 15px; text-align: center; width: 85%; }
+
+input {
+    width: 100%; padding: 15px; margin: 20px 0;
+    background: #222; border: 1px solid #444; color: #fff; border-radius: 8px;
+}
+
+button {
+    padding: 12px 20px; border: none; border-radius: 8px;
+    background: #0084ff; color: #fff; font-weight: bold; cursor: pointer;
+}
+
+.grid-projetos { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 20px; }
+
+.editor-box { width: 95%; height: 90%; display: flex; flex-direction: column; }
+
+header { display: flex; justify-content: space-between; margin-bottom: 10px; }
+
+textarea {
+    flex: 1; background: #161616; color: #00ff00; 
+    padding: 15px; border: 1px solid #333; border-radius: 10px;
+    font-family: monospace; font-size: 14px; outline: none;
+}
+
+.save { background: #22c55e; }
+.btn-reset { background: #ef4444; margin-top: 20px; }
